@@ -21,7 +21,7 @@ num_files = 10000
 parm = 1.3
 # 协作参数,1协作，0不协作
 co = 1
-sw = 1
+sw = 0
 
 # 路由节点参数
 cache_size = 50
@@ -210,7 +210,6 @@ for time in range(1, timeduring):
             if sw == 0:
                 for i in range(agent_num):
                     agent[i].learn()
-                    os.makedirs('./data/agent'+str(i), exist_ok=True)
                     path = os.path.join('./data/agent'+str(i), 'agent.npy')
                     model_path = os.path.join(
                         './data/agent'+str(i), 'agent.pt')
